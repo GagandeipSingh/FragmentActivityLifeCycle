@@ -2,11 +2,11 @@ package com.example.fragmentactivity.fragments
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.fragmentactivity.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -44,7 +44,12 @@ class FirstFragment : Fragment() {
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Toast.makeText(requireContext(),"onViewCreated",Toast.LENGTH_SHORT).show()
 
+
+    }
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Toast.makeText(requireContext(),"onAttach",Toast.LENGTH_SHORT).show()
